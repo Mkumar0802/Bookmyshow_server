@@ -4,8 +4,8 @@
   "description": "bookmyshow server",
   "main": "app.js",
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js"
+    "start": "node app.js",
+    "dev": "nodemon app.js"
   },
   "author": "",
   "license": "ISC",
@@ -14,7 +14,6 @@
     "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
     "debug": "^4.3.4",
-    "dotenv": "^16.0.0",
     "express": "^4.17.3",
     "http-errors": "^2.0.0",
     "jade": "^1.11.0",
