@@ -6,6 +6,7 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var app = express();
+require("dotenv").config();
 const port = process.env.PORT || 3001;
 // var authorise = require("./Module/authModule");
 var registerRouter = require("./routes/reg");
