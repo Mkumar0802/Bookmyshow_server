@@ -7,4 +7,4 @@ router.get('/gettheatre',theatreModule.gettheatre);
 router.patch('/updatetheatre/:theatreId',theatreModule.updatetheatre);
 router.delete('/deletetheatre/:theatreId',theatreModule.deletetheatre);
 
-module.exports = router;
+module.exports = router;            
