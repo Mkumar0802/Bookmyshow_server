@@ -64,6 +64,6 @@ exports.login = async (req,res,next)=>{
     if(!isValid) return res.status(400).send({msg:"Password doesn't match"});
 
     // Generate Token 
-    var token = jwt.sign({existUser}, 'SWERA', {expiresIn:'1h'});  
+    var token = jwt.sign({existUser}, 'secret123', {expiresIn:'1h'});  
     res.send(token);
 }
