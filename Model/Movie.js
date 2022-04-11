@@ -6,21 +6,31 @@ const movieSchema = new Schema({
         type:String,
         required:true,
         minlength:1,
-        maxlength:30
+        maxlength:50
     },
-    pic:{
+    image:{
         type:String,
         required:true
+    },
+    screen:{
+        type:String,
+        maxlength:40 
+    },
+    language:{
+        type:String,
+        maxlength:40            
     },
     certificate:{
         type:String,
         maxlength:5,
         required:true
     },
-    language:{
+   
+    rating:{
         type:String,
-        maxlength:40            
+        maxlength:40
     }
+
 })
 
 const Movie = mongoose.model('movie',movieSchema,'movieCollection');
