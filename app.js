@@ -14,6 +14,7 @@ var mongo=require('./connection')
 var movieRouter = require('./routes/movie')
 var theatreRouter = require('./routes/theatre')
 var contactRouter = require('./routes/contact')
+var paymentRouter= require ("./routes/Payment")
 var cors = require('cors')
 // var authorise = require('./Module/authModule')
 mongo.connect()
@@ -34,7 +35,7 @@ app.use('/users', usersRouter);
 app.use('/movie',movieRouter)
 app.use('/theatre',theatreRouter)
 app.use('/contact',contactRouter)
-
+app.use('/payment',paymentRouter)
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
