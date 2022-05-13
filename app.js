@@ -15,7 +15,10 @@ var movieRouter = require('./routes/movie')
 var theatreRouter = require('./routes/theatre')
 var contactRouter = require('./routes/contact')
 var paymentRouter= require ("./routes/Payment")
+var userRoutes = require("./routes/userRoutes")
 var cors = require('cors')
+
+require("dotenv").config();
 // var authorise = require('./Module/authModule')
 mongo.connect()
 
@@ -36,6 +39,9 @@ app.use('/movie',movieRouter)
 app.use('/theatre',theatreRouter)
 app.use('/contact',contactRouter)
 app.use('/payment',paymentRouter)
+app.use("/users", userRoutes);
+
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
